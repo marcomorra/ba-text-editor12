@@ -19,7 +19,7 @@ a:active{
 .ba-wrapper{
     max-width: 1060px;
     width: 100%;
-    padding: 0 15px;
+    padding: 150px 15px 0;
     margin: 0 auto;
 }
 
@@ -30,6 +30,7 @@ a:active{
     padding: 200px 130px 35px 125px;
 }
 .ba-article-meta{
+    font-family: "ProximaNova", sans-serif;
     color: #b4b4b4;
     font-size: 20px;
     text-transform: uppercase;
@@ -56,12 +57,13 @@ a:active{
     color: #2a2a2a;
     margin-bottom: 0.25em;
     letter-spacing: 0.053em;
-    transition: .9s;
-    transition-timing-function: cubic-bezier(1, -1.61, 0, 1.14);
+    /* transition: .9s; */
+    /* transition-timing-function: cubic-bezier(1, -1.61, 0, 1.14); */
+    font-family: 'Roboto', sans-serif;
 }
-.ba-article__title:hover{
+/* .ba-article__title:hover{
 letter-spacing: -40px;
-}
+/ */
 .ba-article__excerpt{
     color: #8f8f8f;
     font-size: 1.875rem;
@@ -72,4 +74,83 @@ letter-spacing: -40px;
     color: #000;
     font-size: 1.6875rem;
     line-height: 1.53;
+}
+/* Form */
+
+.ba-form-editor{
+    position: absolute;
+    right: 0;
+    top: 47px;
+    max-width: 870px;
+    width: 100%;
+}
+
+.ba-form-title{
+    background-color: #000;
+    padding: 40px 0 50px 60px;
+    height: 188px;
+}
+.ba-form__input{
+    display: block;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid #303030;
+    font-size: 3rem;
+    font-family: serif;
+    color: #fefefe;
+    line-height: 1.9583;
+}
+.ba-form__label{
+    color: #767676;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+.ba-form-bottom{
+    background-color: #edb62b;
+    height: 78px;
+    padding: 0 200px 0 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 63px);
+    margin-left: auto;
+}
+.ba-form-btn{
+    padding: 0;
+    height: 36px;
+    width: 36px;
+    background-color: transparent;
+    text-transform: uppercase;
+    opacity: 0.6;
+    cursor: pointer;
+    color: #fff;
+}
+.ba-form-btn:hover,
+.ba-form-btn:focus,
+.ba-form-btn_active{
+    opacity: 1;
+}
+[class*="ba-form-text-align"]{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+[class*="ba-form-text-align"] span {
+    height: 3px;
+    width: 36px;
+    max-width: 100%;
+    display: block;
+    background-color: #fff;
+}
+[class*="ba-form-text-align"]:not(.ba-form-text-align_justify) span:nth-child(even) {
+    max-width: 65%;
+}
+.ba-form-text-align_center{
+    align-items: center;
+}
+.ba-form-text-align_right{
+    align-items: flex-end;
 }
